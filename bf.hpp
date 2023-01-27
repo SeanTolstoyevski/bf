@@ -2,6 +2,7 @@
 #define __BF_PROJECT_HPP__
 
 #include <iosfwd>
+#include <iostream>
 #include <sstream>
 #include <string>
 
@@ -13,7 +14,7 @@ namespace internal
 template <typename charT = char, typename... Targs>
 void __out(std::basic_ostream<charT> &os, const Targs &...args) noexcept
 {
-	static std::ios oldState(nullptr);
+	std::ios oldState(nullptr);
 	oldState.copyfmt(os);
 	((os << args), ...);
 	os.copyfmt(oldState);
