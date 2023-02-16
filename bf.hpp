@@ -1,3 +1,16 @@
+/*
+BF (Basic Format) - MIT License
+
+Copyright SeanTolstoyevski and all contributors
+
+* source: https://github.com/SeanTolstoyevski/bf
+
+This project is provided as-is, without any warranties or guarantees.
+While the authors have taken care in creating it, all responsibility for use
+rests with the user.
+
+ */
+
 #ifndef __BF_PROJECT_HPP__
 #define __BF_PROJECT_HPP__
 
@@ -61,9 +74,6 @@ inline std::string formatln(const Targs &...args)
 {
 	return format(args..., "\n");
 }
-
-#define logln(...) \
-	println(__FILE__, ":", __LINE__, "(", __func__, ")", " ", __VA_ARGS__)
 
 }	 // namespace bf
 
